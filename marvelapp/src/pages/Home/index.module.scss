@@ -55,6 +55,7 @@
 .bar{
     margin: 40px auto;
     width: 60%;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     
@@ -86,4 +87,20 @@
 .redTxt{
     color: #fa7c7c;
     font-weight: bold;
+}
+
+@media screen and (max-width: 600px){
+    p {
+        text-align: center;
+    }
+    .bar{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        div {
+            margin-bottom: 4%;
+            font-size: 14px;
+            gap: 10px;
+        }
+    }
 }

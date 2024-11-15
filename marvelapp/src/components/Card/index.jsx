@@ -1,11 +1,20 @@
 import { useState } from "react";
 import style from "./index.module.scss";
 //IMGs
-import HeartEmpty from "../../assets/icones/heart/Path Copy 2.png"
+import HeartEmpty from "../../assets/icones/heart/Path Copy 2.png";
 
-export default function Card({ key, nome, hearted, img }) {
+//
+import { useNavigate } from "react-router-dom";
+
+export default function Card({ key, nome, hearted, img, id, item, adicionarFavorito }) {
 
     const [favorite, setFavorite] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleNavigation = () => {
+        navigate(`/character/${id}`, { state: { item } });
+    };
 
     return (
         <div
@@ -19,13 +28,15 @@ export default function Card({ key, nome, hearted, img }) {
             <div
                 className={style.btnDiv}
             >
-                <button>
+                <button
+                    onClick={handleNavigation}
+                >
                     <span>{nome}</span>
                 </button>
 
-                <button>
+                <button onClick={adicionarFavorito}>
                     <img
-                    src={HeartEmpty}
+                        src={HeartEmpty} 
                     />
                 </button>
             </div>

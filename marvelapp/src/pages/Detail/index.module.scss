@@ -1,0 +1,86 @@
+body {
+    // background: #fcfdfc;
+    // background: #e7f6e7;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 4%;
+}
+
+.btnContainer{
+    display: flex;
+
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 16vw;
+    p {
+        color: #898989;
+    }
+    img {
+        width: 50vw;
+        height: auto;
+    }
+}
+
+.flex {
+    display: flex;
+    gap: 4vw;
+    margin-bottom: 4%;
+}
+
+.comic {
+    h3{ color: #404040; }
+    .comicDiv {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        span {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3f3f3f;
+        }
+    }
+
+}
+
+.comicCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+
+    img {
+        height: 140px;
+        max-width: 100px;
+        object-fit: fill;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+
+        img {
+            width: 80vw;
+            height: auto;
+        }
+    }
+}
